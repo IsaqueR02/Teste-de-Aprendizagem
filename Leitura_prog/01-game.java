@@ -14,7 +14,7 @@ public class modulo_1 {
 		System.out.println("-------------------");
 		System.out.println("Para começarmos a jornada insira seu nome: ");
 		nome = in.nextLine();
-		System.out.println("Você deseja avançar para qual direção? (w,s,a,d)");
+		System.out.println("Você deseja avançar para qual direção? (w ou s)");
 		String comando = in.nextLine();
 		if(comando.equals("w")) {
 			System.out.println("Você está indo para frente!");
@@ -42,7 +42,8 @@ public class modulo_1 {
 				comando = in.nextLine();
 				if(comando.equals("w")) {
 					System.out.println("Você voltou a sala principal.");
-				}if(comando.equals("w")) {
+					System.out.println("Andou mais um pouco");
+				if(comando.equals("w")) {
 					System.out.println("Um inimigo surgiu, o que deseja fazer?\n"+ 
 				"x) atacar\n"+
 				"c) correr\n");
@@ -52,9 +53,8 @@ public class modulo_1 {
 					if(rand.nextInt(100) < 70) {
 						System.out.println("Você venceu!\n");
 						comando = in.nextLine();
-					}else{
-						System.out.println("O jogo terminou");
 					}
+					
 						if(comando.equals("w")) {
 
 							System.out.println("Tem uma porta a frente, quer usar a chave?\n"+ "x) Sim\n"+"z) Não\n");
@@ -68,7 +68,7 @@ public class modulo_1 {
 									if(rand.nextInt(100) < 85) {
 										System.out.println("Você venceu!\n");
 										System.out.println("Você pegou a chave do Báu secreto.");
-										System.out.println("Quer abrir?"+ "x) Sim\n"+ "z) Não\n");
+										System.out.println("Quer abrir?\n"+ "x) Sim\n"+ "z) Não\n");
 										comando = in.nextLine();
 										if(comando.equals("x")) {
 											System.out.println("Você encontrou uma Carta.");
@@ -84,17 +84,21 @@ public class modulo_1 {
 					}else {
 						System.out.println("Você perdeu o jogo!");
 					}
-			}
+			}else{
+				System.out.println("O jogo terminou");
 				
-			}else {
+			}
+				}
+				}else {
 				System.out.println("Você não pegou a chave.");
+				comando = in.nextLine();
 				if(comando.equals("w")) {
 					System.out.println("Você voltou a sala principal.");
-				}if(comando.equals("w")) {
+				if(comando.equals("w")) {
 					System.out.println("Um inimigo surgiu, o que deseja fazer?\n"+ 
 				"x) atacar\n"+
 				"c) correr\n");
-				}comando = in.nextLine();
+				comando = in.nextLine();
 				
 				if(comando.equals("x"))/*chamando uma tecla de teclado */ {
 					if(rand.nextInt(100) < 70) {
@@ -107,4 +111,6 @@ public class modulo_1 {
 			}
 		}
 	}
+}
+}
 }
